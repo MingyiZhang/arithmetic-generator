@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Problems Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Arithmetic Problems Generator</h1>
+
+<div class="config">
+    <!-- Add configuration options here -->
+    <label for="numProblems">Number of problems:</label>
+    <input type="number" id="numProblems" min="1" value="10">
+    <br>
+    <label for="hardness">Hardness:</label>
+    <select id="hardness">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+    <br>
+    <label>
+        <input type="checkbox" id="addition" checked> Addition
+    </label>
+    <label>
+        <input type="checkbox" id="subtraction" checked> Subtraction
+    </label>
+    <label>
+        <input type="checkbox" id="multiplication" checked> Multiplication
+    </label>
+    <label>
+        <input type="checkbox" id="division" checked> Division
+    </label>
+    <br>
+    <button id="startBtn">Start</button>
+</div>
+
+<div class="problem">
+    <!-- Display the current problem here -->
+    <p id="currentProblem"></p>
+    <input type="number" id="userAnswer" style="display: none;" />
+    <button id="submitAnswer" style="display: none;">Submit</button>
+    <p id="errorMessage" style="display: none; color: red;"></p>
+</div>
+
+<div class="result">
+    <!-- Display the result and mistakes here -->
+    <h2 id="resultsHeading" style="display: none;">Results</h2>
+    <p id="resultsMessage" style="display: none;"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
